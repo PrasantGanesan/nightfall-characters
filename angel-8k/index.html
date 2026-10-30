@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>angel 8K</title><style>
+:root{--bg:#f6f5f2;--fg:#1c1b19;--muted:#6b6862;--card:#ffffff;--line:#e3e1dc;--accent:#2f6f9f;--ok:#2e7d32;--bad:#c62828;--warn:#b26a00}
+@media(prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecebe7;--muted:#9a978f;--card:#1e1e1c;--line:#2d2d2a;--accent:#7fb3dd;--ok:#7fd48a;--bad:#ff8a80;--warn:#ffb74d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:16px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+header a{color:var(--fg);text-decoration:none;font-weight:600}header span{color:var(--muted);font-size:13px}
+main{max-width:1100px;margin:0 auto;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;background:#ddd;display:block}
+.card .b{padding:12px 14px}.card h3{margin:0 0 4px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px}
+.card a{color:inherit;text-decoration:none}
+.badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);margin-top:6px}
+.badge.building{color:var(--warn);border-color:var(--warn)}.badge.built,.badge.accepted{color:var(--ok);border-color:var(--ok)}
+.badge.stopped,.badge.rejected{color:var(--bad);border-color:var(--bad)}.badge.review{color:var(--accent);border-color:var(--accent)}
+.banner{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:0 0 16px}
+.banner ul{margin:6px 0 0;padding-left:0;list-style:none;columns:2;font-size:14px}.banner li{margin:2px 0}
+model-viewer{display:block;width:100%;height:min(70vh,640px);background:var(--card);border:1px solid var(--line);border-radius:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+button{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
+button.on{border-color:var(--accent);color:var(--accent)}
+.two{display:grid;grid-template-columns:2fr 1fr;gap:20px}@media(max-width:800px){.two{grid-template-columns:1fr}.banner ul{columns:1}}
+table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.ok{color:var(--ok)}.fail{color:var(--bad)}.muted{color:var(--muted)}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:20px 0 8px}
+.dl a{display:inline-block;margin:0 10px 6px 0;color:var(--accent)}
+.feed{font-size:13px;color:var(--muted);list-style:none;padding:0;margin:0}.feed li{padding:4px 0;border-bottom:1px solid var(--line)}
+.feed b{color:var(--fg);font-weight:500}
+</style>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script></head><body>
+<header><a href="../index.html">Nightfall characters</a><span>built 2026-10-30T14:18:30-07:00</span></header>
+<main>
+<h1>angel 8K</h1><p class="muted">not in the post.</p>
+<div class="banner"><span class="badge review">built, waiting for your accept/reject</span> <span class="muted">· balance before 3,255 cr, estimate ~115 cr</span><ul><li>✅ mesh <span class='muted'>(70 cr, 6m15s, hires: no polycount budget)</span></li><li>✅ rig + UE5 skeleton <span class='muted'>(35 cr, 4m08s)</span></li><li>✅ checks <span class='muted'>(0m00s, 17/17 pass)</span></li><li>✅ store SK_Angel8k.fbx <span class='muted'>(0m00s)</span></li><li>✅ Mixamo FBX <span class='muted'>(10 cr, 2m56s)</span></li><li>✅ your clips <span class='muted'>(0m38s, Jump, Salute, Standard Walk)</span></li><li>✅ web page <span class='muted'>(0m00s)</span></li><li>✅ publish <span class='muted'>(0m05s)</span></li></ul></div>
+<div class="two"><div>
+<model-viewer id="mv" src="angel-8k_clips_web.glb" alt="Angel8k" camera-controls autoplay environment-image="neutral" tone-mapping="neutral" shadow-intensity="1" shadow-softness="0.8" exposure="1.1" interaction-prompt="none"></model-viewer><div class="row" id="anims"></div><p class="muted" id="hint">Drag to orbit, scroll to zoom.</p>
+</div><div>
+<img src="preview.png" alt="preview" style="width:100%;border-radius:12px;border:1px solid var(--line)">
+<h2>Facts</h2><table><tr><th>Status</th><td>built, waiting for your accept/reject</td></tr><tr><th>Triangles (final FBX)</th><td>1924100</td></tr><tr><th>Bones</th><td>53</td></tr><tr><th>Height</th><td>1.6 m</td></tr><tr><th>Source mesh triangles</th><td>1924100</td></tr><tr><th>Web copy</th><td>50,002 -&gt; ~50,002 tris</td></tr><tr><th>Your clips</th><td>Jump, Salute, Standard Walk</td></tr><tr><th>Credits spent</th><td>110.0</td></tr><tr><th>Stage 3 task</th><td>13eb8403-ebea-4c31-bf75-4f6af187531b</td></tr><tr><th>Rig task</th><td>d5d5bec9-7a2e-459a-a0a3-25e9c2e24ad9</td></tr></table>
+<h2>Downloads</h2><div class="dl"><a href="SK_Angel8k.fbx" download>UE5 FBX (SK_Angel8k.fbx)</a><a href="angel-8k_clips.glb" download>Your clips, GLB (full)</a><a href="angel-8k_clips_web.glb" download>Your clips, GLB (web copy)</a><a href="angel-8k_clips.fbx" download>Your clips, FBX</a></div>
+
+</div></div>
+<h2>Checks (17 of 17 pass)</h2>
+<table><tr><td>mesh file present</td><td class="ok">PASS</td><td class="muted">angel-8k.glb</td></tr><tr><td>triangle budget waived (hires look test)</td><td class="ok">PASS</td><td class="muted">1924100 triangles</td></tr><tr><td>textures present</td><td class="ok">PASS</td><td class="muted">3 image(s), 1 textured material(s)</td></tr><tr><td>single mesh (no stray parts)</td><td class="ok">PASS</td><td class="muted">1 mesh(es), 1 primitive(s)</td></tr><tr><td>height recorded (glTF metres)</td><td class="ok">PASS</td><td class="muted">0.9796 m</td></tr><tr><td>rigged file present</td><td class="ok">PASS</td><td class="muted">angel-8k_rigged.glb</td></tr><tr><td>skin with joints present</td><td class="ok">PASS</td><td class="muted">65 joint(s)</td></tr><tr><td>mixamo core bones present (pre-rename)</td><td class="ok">PASS</td><td class="muted">all present</td></tr><tr><td>FBX inspected by Blender</td><td class="ok">PASS</td><td class="muted">inspect.json</td></tr><tr><td>required UE5 bones present</td><td class="ok">PASS</td><td class="muted">all present</td></tr><tr><td>no unexpected bone names</td><td class="ok">PASS</td><td class="muted">none</td></tr><tr><td>height reads 1.4 to 2.2 m after import (units are cm/m, not 100x off)</td><td class="ok">PASS</td><td class="muted">1.6 m</td></tr><tr><td>Z up (tallest extent is Z)</td><td class="ok">PASS</td><td class="muted">Z</td></tr><tr><td>skin weights on every vertex</td><td class="ok">PASS</td><td class="muted">0 unweighted</td></tr><tr><td>root bone at origin</td><td class="ok">PASS</td><td class="muted">True</td></tr><tr><td>textures linked</td><td class="ok">PASS</td><td class="muted">4 image(s)</td></tr><tr><td>final file named SK_&lt;Name&gt;.fbx</td><td class="ok">PASS</td><td class="muted">SK_Angel8k.fbx (assigned at stage 6)</td></tr></table>
+</main>
+<script>
+const mv=document.getElementById('mv'),box=document.getElementById('anims'),hint=document.getElementById('hint'),srcs=document.getElementById('srcs');
+if(mv){mv.addEventListener('load',()=>{const names=mv.availableAnimations||[];box.innerHTML='';
+ if(!names.length){hint.textContent='Static file: no animations. Drag to orbit, scroll to zoom.';return;}
+ hint.textContent='Drag to orbit, scroll to zoom.';
+ const mark=b=>{[...box.children].forEach(c=>c.classList.remove('on'));b.classList.add('on');};
+ names.forEach((n,i)=>{const b=document.createElement('button');b.textContent=n.replace('preset:','');if(i===0)b.classList.add('on');
+  b.onclick=()=>{mv.animationName=n;mv.play();mark(b);};box.appendChild(b);});
+ const still=document.createElement('button');still.textContent='Still';still.title='Pause the animation';
+ still.onclick=()=>{mv.pause();mark(still);};box.appendChild(still);
+ mv.animationName=names[0];mv.play();});
+if(srcs){[...srcs.children].forEach(b=>{b.onclick=()=>{if(mv.src.endsWith(b.dataset.src))return;hint.textContent='Loading '+b.textContent+'…';
+ [...srcs.children].forEach(c=>c.classList.remove('on'));b.classList.add('on');mv.src=b.dataset.src;};});}}
+</script></body></html>
